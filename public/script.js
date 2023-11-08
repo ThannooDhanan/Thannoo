@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
     preCars = document.getElementById("preCars")
     btnCars = document.getElementById("btnCars")
     btnListings = document.getElementById("btnListings")
-    carForm = document.getElementById("carForm")
+    ownerForm = document.getElementById("ownersForm")
     btnMakes = document.getElementById("btnToyota")
     drpDwnMakes = document.getElementById("makesDrop")
     fetchMakes()
@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
     btnListings.addEventListener("click", makeListings)
     btnCars.addEventListener("click", fetchCars)
     btnMakes.addEventListener("click", fetchMakesList)
-    carForm.addEventListener("click", fetchOwners)
+    ownerForm.addEventListener("click", fetchOwners)
 })
 
 async function fetchCars() {
