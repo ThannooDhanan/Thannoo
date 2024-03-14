@@ -17,12 +17,14 @@ window.addEventListener("load", () => {
     ownerForm.addEventListener("click", fetchOwners)
 })
 
+//returns all cars as a string
 async function fetchCars() {
     var response = await fetch("/cars")
     var data = await response.json()
     preCars.innerText = JSON.stringify(data, null, 4)
 }
 
+//gets all makes of cras in a database
 async function fetchMakesList() {
     let searchMake = "/cars?make="+drpDwnMakes.value
     var response = await fetch(searchMake)
@@ -57,6 +59,7 @@ function createTableHeader(dataObject){
     return row
 }
 
+//create a data cell in a table
 function createDataEntry(data){
     const td = document.createElement("td")
     td.innerHTML = data
@@ -65,6 +68,7 @@ function createDataEntry(data){
     return td
 }
 
+// crearte a row for a table
 function createDataRow(dataObject){
     const row = document.createElement("tr")
 
