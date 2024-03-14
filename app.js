@@ -76,6 +76,7 @@ app.get("/listings", (req, res)=>{
 //complete this handler on your own
 })
 
+//create a car object
 function breifListing(car){
     let listing  = {}
     listing.year = car.year
